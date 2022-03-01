@@ -1,0 +1,26 @@
+/** css styles for left menu bar and top menu bar **/
+.root {
+  display: flex;
+}
+
+.toolbar {
+  padding-right: 24px
+}
+
+/*.appBarSpacer: theme.mixins.toolbar*/
+.content {
+  flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container {
+  padding-top: 10px;
+  min-height: 80vh;
+}
+
+.paper {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
