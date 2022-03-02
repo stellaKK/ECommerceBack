@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-back",
   "version": "0.1.0",
-  "homepage":"https://stellaKK.github.io/ECommerceBack",
+  "homepage":"https://stellakk.github.io/ECommerceBack/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
 	"predeploy": "npm run build",
-+   "deploy": "gh-pages -d build",
+	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
