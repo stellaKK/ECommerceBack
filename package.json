@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-back",
   "version": "0.1.0",
-  "homepage":"https://stellakk.github.io/ECommerceBack",
+  "homepage":"https://stellakk.github.io/ecommerceback",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.11.4",

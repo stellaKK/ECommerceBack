@@ -13,20 +13,20 @@ import TaskMain from "./pages/tasks/TaskMain";
 
 function App() {
   return (
-      <Router basename='/'>
+      <Router>
         <div className="App">
 
           <Routes>
-            <Route path="/login" element={<Login />} />
+            <Route path={`/login`} element={<Login />} />
 
-            <Route path="/inventory/*" element={<InventoryMain />} />
-            <Route path="/invoices/*" element={<OrderMain />} />
-            <Route path="/prices/*" element={<PriceMain />} />
-            <Route path="/clients/*" element={<ClientPageMain />} />
-            <Route path="/messages/*" element={<MessageMain />} />
-            <Route path="/tasks/*" element={<TaskMain />} />
+            <Route path={`/inventory/*`} element={<InventoryMain />} />
+            <Route path={`/invoices/*`} element={<OrderMain />} />
+            <Route path={`/prices/*`} element={<PriceMain />} />
+            <Route path={`/clients/*`} element={<ClientPageMain />} />
+            <Route path={`/messages/*`} element={<MessageMain />} />
+            <Route path={`/tasks/*`} element={<TaskMain />} />
 
-            <Route path="/" element={<Dashboard />} />
+            <Route path={`/`} element={<Dashboard />} />
           </Routes>
         </div>
       </Router>
