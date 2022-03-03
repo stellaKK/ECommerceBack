@@ -1,5 +1,5 @@
 # View Live Site
-page url: https://stellakk.github.io/ECommerceBack/
+page url: https://stellakk.github.io/ecommerceback/
 
 # Getting Started with Create React App
 
