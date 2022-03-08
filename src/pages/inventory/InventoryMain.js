@@ -14,6 +14,7 @@ import {Copyright} from "../dashboard/Copyright";
 import MenuBars from "../dashboard/MenuBars";
 import "../dashboard/MenuBars.css";
 import AppBarSpacer from "../dashboard/AppBarSpacer";
+import {getHashPaths} from "../../components/HelperFunctions";
 
 
 const logs = [
@@ -36,9 +37,14 @@ class InventoryMain extends Component {
 
   render() {
 
-    const path = window.location.pathname;
-    let paths = path.split("/");
-    console.log(paths);
+    // use under "browserRouter"
+    // const path = window.location.pathname;
+    // let paths = path.split("/");
+    // --------------- use under "browserRouter" END
+
+    // use under 'hashRouter"
+    let paths = getHashPaths(window.location.href);
+    // -----------------use under 'hashRouter" END
 
     // determine which view need to be rendered
     let view = "There are some errors.";

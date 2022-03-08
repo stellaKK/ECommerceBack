@@ -1,6 +1,6 @@
 //import React, {Component} from "react";
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import CustomPrice from "./custom/CustomPrice";
 import UpdatePriceMain from "./UpdatePriceMain";
 import PriceTopMenu from "./PriceTopMenu";
@@ -25,23 +25,15 @@ const logs = [
 
 // class PricesMain extends Component {
 export default function PricesMain() {
-  //
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     activeSection: "" // keep track which text in menu need to be highlighted
-  //   }
-  // }
-  //
+
   const [activeSection, setActiveSection] = useState("");
   const setActiveTitle = (item) => {
     setActiveSection({activeSection: item.label});
   };
 
-  // render() {
-
-
-    let paths = window.location.pathname.split('/');
+    let location = useLocation();
+    let paths = location.pathname.split('/');
+    //let paths = window.location.pathname.split('/');
     const navigate = useNavigate();
 
     // check current section
@@ -53,7 +45,8 @@ export default function PricesMain() {
       } else if (subPath === "search") {
         // get query params after ?=
         let delim = "=";
-        let query = window.location.search; //eg, ?type=custom
+        //let query = window.location.search; //eg, ?type=custom
+        let query = location.search; //eg, ?type=custom
         let temp = query.slice(1).split(delim);
         if (temp[1] === "custom") {
           view = <CustomPrice />;

@@ -80,3 +80,11 @@ export function userHasNoMsg (msgId, userList) {
 export function getChatMessage (messages, userId) {
   return messages.filter(message => message.userId === userId);
 }
+
+// get current URL base on the use of "hashRouter"
+// sample input: http://localhost:3000/#/inventory/update
+// return: ["inventory", "update"]
+export function getHashPaths(url) {
+  let first = url.split("#");
+  return first.length > 1 ? first[1].split("/") : [""];
+}

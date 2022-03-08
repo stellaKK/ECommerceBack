@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router-dom";
 import SubTitle from "../SubTitle";
 import ClientListMain from "./clientList/ClientListMain";
 import ClientDetailMain from "./clientDetail/ClientDetailMain";
@@ -13,9 +13,8 @@ import AppBarSpacer from "../dashboard/AppBarSpacer";
 
 export default function ClientPageMain() {
 
-  const path = window.location.pathname;
-  let paths = path.split("/");
-  console.log(path);
+  let location = useLocation();
+  let paths = location.pathname.split("/");
 
   const navigate = useNavigate();
 

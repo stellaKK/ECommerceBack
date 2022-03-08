@@ -17,16 +17,16 @@ function App() {
         <div className="App">
 
           <Routes>
-            <Route path="/ecommerceback/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-            <Route path="/ecommerceback/inventory/*" element={<InventoryMain />} />
-            <Route path="/ecommerceback/invoices/*" element={<OrderMain />} />
-            <Route path="/ecommerceback/prices/*" element={<PriceMain />} />
-            <Route path="/ecommerceback/clients/*" element={<ClientPageMain />} />
-            <Route path="/ecommerceback/messages/*" element={<MessageMain />} />
-            <Route path="/ecommerceback/tasks/*" element={<TaskMain />} />
+            <Route path="/inventory/*" element={<InventoryMain />} />
+            <Route path="/invoices/*" element={<OrderMain />} />
+            <Route path="/prices/*" element={<PriceMain />} />
+            <Route path="/clients/*" element={<ClientPageMain />} />
+            <Route path="/messages/*" element={<MessageMain />} />
+            <Route path="/tasks/*" element={<TaskMain />} />
 
-            <Route path="/ecommerceback/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
           </Routes>
         </div>
       </Router>

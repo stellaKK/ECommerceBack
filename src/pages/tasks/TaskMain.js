@@ -1,7 +1,7 @@
 // import React, {Component} from "react";
 // import {withRouter} from "react-router-dom";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles"
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
@@ -29,19 +29,20 @@ export default function TaskMain() {
 
   const classes = useStyles();
   const navigate = useNavigate();
-  const path = window.location.pathname.split("/");
-  const pathLen = path.length;
+  let location = useLocation();
+  let paths = location.pathname.split("/");
+  const pathLen = paths.length;
 
   // condition rendering
   let view;
   switch (true) {
-    case (pathLen > 2 && path[2] === "new"):
+    case (pathLen > 2 && paths[2] === "new"):
       view = <CreateNewTask />;
       break;
-    case (pathLen > 2 && path[2] === "task"):
+    case (pathLen > 2 && paths[2] === "task"):
       // task detail page
-      if (pathLen === 4 && typeof(parseInt(path[3])) === 'number') {
-        view = <TaskDetail taskID={path[3]} />;
+      if (pathLen === 4 && typeof(parseInt(paths[3])) === 'number') {
+        view = <TaskDetail taskID={paths[3]} />;
       }
       break;
     default:
